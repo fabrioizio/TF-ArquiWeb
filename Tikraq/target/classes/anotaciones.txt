@@ -1,0 +1,4 @@
+https://bcrypt-generator.com
+https://8gwifi.org/jwsgen.jsp
+
+http://localhost:8080/swagger-ui/index.html
