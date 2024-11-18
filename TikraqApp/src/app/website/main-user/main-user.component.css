@@ -1,0 +1,274 @@
+@font-face {
+  font-family: 'Now Regular';
+  /*src: local('Now Regular'), url('../fonts/Now-Regular.woff') format('woff');*/
+}
+
+@font-face {
+  font-family: 'Now Bold';
+  /*src: local('Now Bold'), url('../fonts/Now-Bold.woff') format('woff');*/
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+nav {
+  padding: 10px;
+  background-color: #CDF5F7;
+  display: flex;
+}
+
+
+
+a.nav-block {
+  font-family: 'Now Bold';
+  font-size: 20px;
+  padding: 10px;
+  border: 3px solid #FFDE59;
+  border-radius: 25px;
+  background-color: #FFDE59;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  min-width: 130px;
+  white-space: nowrap; /* Evita que el texto se divida en líneas */
+}
+
+a.nav-block:hover {
+  color: white;
+}
+
+img.menu {
+  display: none;
+  cursor: pointer;
+  width: 10%; /* Ajuste relativo al ancho del viewport */
+  max-width: 85px; /* Tamaño máximo para pantallas más grandes */
+  height: auto; /* Mantener proporciones de la imagen */
+}
+section {
+
+  padding: 50px 35px;
+  display: flex;
+  align-items: center
+}
+.main_container{
+  width: 100%;
+  max-width: 1245px;
+  margin: 0 auto;
+  display: flex;
+}
+
+div.web-info {
+
+  margin-right: 30px; /* Reduce el margen derecho */
+}
+
+img.image {
+  max-width: 100%;
+  border-radius: 30px;
+  margin-left: 100px;
+}
+
+h1, p {
+  display: inline-block;
+}
+
+a.nav-block {
+  font-family: 'Now Bold';
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #FFDE59;
+  border-radius: 25px;
+  background-color: #FFDE59;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  min-width: 130px;
+}
+.e{
+  border: 3px solid #FFDE59;
+  background-color: #FFDE59;
+  text-decoration: none;
+  color: black;
+
+}
+.e:hover {
+  color: white;
+}
+
+
+p.nav-block {
+  font-family: 'Now Bold';
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #FFDE59;
+  border-radius: 25px;
+  background-color: #FFDE59;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+p.nav-block:hover {
+  color: white;
+}
+
+h1.web-title {
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-size: 27px;
+  background-color: #ECFF6A;
+  border: 14px solid #ECFF6A;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+p.web-description {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  background-color: #F3FFA1;
+  border: 14px solid #F3FFA1;
+  border-radius: 25px;
+  white-space: pre-line;
+  padding: 10px;
+}
+
+h1.social-title {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  background-color: #F3FFA1;
+  border: 13px solid #F3FFA1;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+div.social-media {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+
+img.menu {
+  display: none;
+  cursor: pointer;
+  width: 10%; /* Ajuste relativo al ancho del viewport */
+  max-width: 85px; /* Tamaño máximo para pantallas más grandes */
+  height: auto; /* Mantener proporciones de la imagen */
+}
+
+.option-list {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5CE1E6;
+  position: absolute;
+  top: 5.8em;
+  right: 0;
+  width: 20em;
+  height: auto;
+}
+.menu-container {
+  display: flex;
+  margin-left: auto; /* Esto empuja los elementos hacia la derecha */
+  gap: 20px; /* Añade espacio entre los elementos */
+}
+
+
+@media only screen and (max-width: 1245px) {
+  nav {
+    justify-content: space-between;
+    padding: 10px; /* Espaciado alrededor de la barra de navegación */
+  }
+
+  a.nav-block {
+    display: none; /* Oculta los enlaces en pantallas pequeñas */
+  }
+  img.menu {
+    display: block; /* Muestra el menú hamburguesa en pantallas pequeñas */
+    cursor: pointer;
+    width: 15%; /* Tamaño relativo del menú */
+    max-width: 70px; /* Tamaño máximo del menú */
+    height: auto; /* Mantener proporciones */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.web-info {
+    margin-right: 0;
+    text-align: center;
+    padding: 10px; /* Espaciado */
+  }
+
+  img.image {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 90%; /* Asegúrate de que no sea demasiado grande */
+  }
+}
+@media only screen and (max-width: 768px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.web-info {
+    margin-right: 0;
+    text-align: center;
+    padding: 10px; /* Espaciado */
+  }
+
+  img.image {
+    margin-left: 0;
+    margin-top: 20px;
+    margin-right: 20px; /* Aumentar margen derecho */
+    max-width: 90%; /* Asegurarte de que no sea demasiado grande */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1.web-title {
+    font-size: 18px;
+  }
+
+  p.web-description {
+    font-size: 14px;
+  }
+
+  img.image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  div.social-media {
+    display: flex; /* Alinear en fila */
+    justify-content: center; /* Centrar íconos */
+    flex-wrap: wrap; /* Permitir que se envuelvan si es necesario */
+  }
+
+  div.social-media img {
+    width: 15%; /* Ajustar tamaño relativo */
+    max-width: 70px; /* Tamaño máximo */
+    margin: 5px; /* Espaciado entre íconos */
+  }
+}

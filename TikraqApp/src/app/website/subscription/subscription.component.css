@@ -1,0 +1,133 @@
+
+
+
+body{
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+.main_container{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+Header{
+  display: flex;
+  gap: 15px;
+}
+
+section{
+  padding: 50px 35px;
+  display: flex;
+  align-items: center
+}
+.status{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+h1.page-title{
+  background: #88D3FF;
+  border: 10px solid #88D3FF;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+
+h1.subscription-info{
+  background: #ECFF6A;
+  border: 10px solid #ECFF6A;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+
+p.subscription-desc{
+
+
+  font-size: 21px;
+
+  background: #F3FFA1;
+
+  border: 10px solid #F3FFA1;
+  border-radius: 20px;
+  padding: 0 10px;
+
+  width: 12.5em;
+}
+
+.subscriptions-list{
+
+  display: flex;
+  gap: 35px;
+
+
+}
+
+.sub-option{
+
+  width: 17.5em;
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sub-title{
+  text-align: center;
+  border: 5px solid #FFDE59;
+  border-radius: 25px;
+
+  background-color: #FFDE59;
+
+  width: 60%;
+}
+
+
+.sub-desc{
+
+  background-color: #FFFD91;
+
+  border: 5px solid #FFFD91;
+  border-radius: 25px;
+
+  padding: 10px;
+  font-size: 18px;
+
+}
+
+
+
+.free-option{
+
+  background-color: #F5A940;
+
+  border: 5px solid #F5A940;
+  border-radius: 25px;
+  width: 60%;
+
+  text-align: center;
+
+}
+.options{
+  margin:20px;
+  display: flex;
+  flex-direction: column;
+}
+.monthly-cost-option,
+.annualy-cost-option{
+  text-align: center;
+  margin-top: 0;
+
+  background-color: #F5A940;
+
+  border: 5px solid #F5A940;
+  border-radius: 25px;
+
+  font-size: 20px;
+}
+.submit-message{
+  align-items: center;
+}

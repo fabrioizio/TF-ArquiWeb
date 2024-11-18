@@ -1,0 +1,226 @@
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+/* Agregado para aplicar el estilo de nav */
+nav {
+  padding: 10px;
+  background-color: #CDF5F7;
+  display: flex;
+}
+
+nav img {
+  margin-left: auto; /* Mueve el logo lo más a la izquierda posible */
+}
+
+a.nav-block {
+  font-family: 'Now Bold';
+  font-size: 20px;
+  padding: 10px;
+  border: 3px solid #FFDE59;
+  border-radius: 25px;
+  background-color: #FFDE59;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  min-width: 130px;
+  white-space: nowrap; /* Evita que el texto se divida en líneas */
+}
+
+a.nav-block:hover {
+  color: white;
+}
+
+img.menu {
+  display: none;
+  cursor: pointer;
+  width: 10%; /* Ajuste relativo al ancho del viewport */
+  max-width: 85px; /* Tamaño máximo para pantallas más grandes */
+  height: auto; /* Mantener proporciones de la imagen */
+}
+
+.e {
+  border: 3px solid #FFDE59;
+  background-color: #FFDE59;
+  text-decoration: none;
+  color: black;
+}
+
+.e:hover {
+  color: white;
+}
+
+p.nav-block {
+  font-family: 'Now Bold';
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #FFDE59;
+  border-radius: 25px;
+  background-color: #FFDE59;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.option-list {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5CE1E6;
+  position: absolute;
+  top: 5.8em;
+  right: 0;
+  width: 20em;
+  height: auto;
+}
+
+.menu-container {
+  display: flex;
+  margin-left: auto; /* Esto empuja los elementos hacia la derecha */
+  gap: 20px; /* Añade espacio entre los elementos */
+  align-items: center;
+}
+
+/* Código existente */
+.main_container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+.logo img {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  background-color: #faff87;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.submit-button {
+  background-color: #ffe066;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.submit-button:hover {
+  background-color: #ffdd57;
+}
+
+.extra-options {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.extra-options a {
+  color: #80d4ff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.extra-options a:hover {
+  text-decoration: underline;
+}
+
+.registration-card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Media Queries para Responsividad */
+@media only screen and (max-width: 1245px) {
+  nav {
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  a.nav-block {
+    display: none;
+  }
+
+  img.menu {
+    display: block;
+    cursor: pointer;
+    width: 15%;
+    max-width: 70px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.web-info {
+    margin-right: 0;
+    text-align: center;
+    padding: 10px;
+  }
+
+  img.image {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1.web-title {
+    font-size: 18px;
+  }
+
+  p.web-description {
+    font-size: 14px;
+  }
+
+  img.image {
+    max-width: 100%;
+    height: auto;
+  }
+}

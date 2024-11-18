@@ -1,0 +1,58 @@
+<header>
+  <a [routerLink]="'/main-user-free'">
+    <img src="../../../assets/logo.png" alt="Logo" height="80" width="90">
+  </a>
+  <div class = "status">
+    <h1 class = "page-title">Suscripcion</h1>
+    <h1 class = "subscription-info">No tienes una subscripcion activa</h1>
+    <p class = "subscription-desc">Fijate nuestros precios.</p>
+  </div>
+</header>
+
+<section class="main_container">
+  <div class = "subscriptions-list">
+    <div class = "sub-option">
+      <h1 class = "sub-title">FREE</h1>
+      <div class = "sub-desc">
+        <p>Caracteristicas incluidas:</p>
+        <p>- Funciones básicas de traducción e idiomas limitados.</p>
+        <p>- Incluye anuncios.</p>
+      </div >
+      <div class="options">
+        <button class = "monthly-cost-option" [routerLink]="'/main-user-free'" (click)="activarSuscripcion('FREE')">GRATIS</button>
+      </div>
+    </div>
+    <div class = "sub-option">
+      <h1 class = "sub-title">STARTER</h1>
+      <div class = "sub-desc">
+        <p>Caracteristicas incluidas:</p>
+        <p>- Acceso a todas las funciones básicas de traducción.</p>
+        <p>- Mayor exactitud.</p>
+        <p>- Acceso a funciones de aprendizaje y actividades interactivas.</p>
+        <p>- Sin anuncios</p>
+      </div>
+      <div class = "options" >
+        <button class = "monthly-cost-option" [routerLink]="'/main-user'" (click)="activarSuscripcion('SUSCRIPTOR')">15PEN/MES</button>
+        <br>
+        <button class = "monthly-cost-option" [routerLink]="'/main-user'" (click)="activarSuscripcion('SUSCRIPTOR')">180PEN/AÑO</button>
+      </div>
+
+    </div>
+    <div class = "sub-option">
+      <h1 class = "sub-title">PRO</h1>
+      <div class = "sub-desc">
+        <p>Caracteristicas incluidas:</p>
+        <p>- Acceso completo a todas las funciones avanzadas de traducción.</p>
+        <p>- Acceso a contenido exclusivo interactivo, versiones preliminares y soporte prioritario al cliente.</p>
+        <p> - Acceso a funciones de aprendizaje, actividades interactivas.</p>
+        <p> - Acceso a retroalimentaciones de hablantes nativos y eventos en línea cada cierto tiempo.</p>
+      </div>
+      <div class = "options" >
+        <button class = "monthly-cost-option"  [routerLink]="'/main-user-premium'" (click)="activarSuscripcion('PREMIUM')" >35PEN/MES</button>
+        <br>
+        <button class = "monthly-cost-option" [routerLink]="'/main-user-premium'" (click)="activarSuscripcion('PREMIUM')" >420PEN/AÑO</button>
+      </div>
+    </div>
+  </div>
+</section>
+<p id = "submit-message" class = "submit-message"></p>

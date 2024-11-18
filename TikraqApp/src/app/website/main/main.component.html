@@ -1,0 +1,58 @@
+<nav>
+  <img src='../../../assets/logo.png' height="70" width="80" alt="Logo" >
+  <div class="menu-container">
+    <a class = "nav-block" [routerLink]="'/register'">Regístrate</a>
+    <a class = "nav-block" [routerLink]="'/register'">Contáctanos</a>
+    <a class = "nav-block" [routerLink]="'/register'">Traductor</a>
+    <a class = "nav-block" [routerLink]="'/register'">Aprender</a>
+    <a class = "nav-block" [routerLink]="'/about-me'">Sobre nosotros</a>
+    <a class = "nav-block" [routerLink]="'/register'">Califícanos</a>
+
+  </div>
+  <img class = "menu" onclick = "toggleOptionList()" src = "../../../assets/lesson/menu.png" height="70" width="85" alt="Menu" />
+
+  <div class = "option-list" id = "option-list">
+    <p class = "nav-block" ><a [routerLink]="'/register'" class="e">Regístrate</a></p>
+    <p class = "nav-block" ><a [routerLink]="'/register'" class="e">Contáctanos</a></p>
+    <p class = "nav-block" ><a [routerLink]="'/register'" class="e">Traductor</a></p>
+    <p class = "nav-block" ><a [routerLink]="'/register'" class="e">Aprender</a></p>
+    <p class = "nav-block" ><a [routerLink]="'/register'" class="e">Sobre nosotros</a></p>
+    <p class = "nav-block" ><a [routerLink]="'/register'" class="e">Calificanos</a></p>
+
+  </div>
+</nav>
+
+<section  class="main_container">
+
+  <!-- Information -->
+  <div class = "web-info">
+
+    <header>
+      <h1 class = "web-title">Traduce a lengua nativa!</h1>
+    </header>
+    <p class = "web-description">Es una herramienta que otorgue la
+      facilidad de traducir lenguas nativas
+      a las personas que necesiten
+      comunicarse de manera más
+      eficiente.</p>
+
+
+  </div>
+
+  <!-- Image background -->
+  <img class = "image" src = "../../../assets/image.png" height="340" width= "670" />
+
+</section>
+
+<!-- Social media -->
+<footer>
+  <h1 class = "social-title">¡Síguenos!</h1>
+
+  <div class = "social-media">
+
+    <img src = "../../../assets/instagram.png" height="100" width= "100" />
+    <img src = "../../../assets/facebook.png" height="100" width= "100" />
+    <img src = "../../../assets/x.png" height="95" width= "95" />
+  </div>
+
+</footer>

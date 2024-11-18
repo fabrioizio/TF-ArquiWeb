@@ -1,0 +1,76 @@
+<nav>
+  <a [routerLink] = "'/main-admin'">
+    <img src="../../../assets/logo.png" height="70" width="80" alt="Logo" />
+  </a>
+  <div class="menu-container">
+    <a class="nav-block" [routerLink] = "'/course'">Cursos</a>
+    <a class="nav-block" [routerLink] = "'/lessonA'">Lecciones</a>
+    <a class="nav-block" [routerLink] = "'/progress'">Progresos</a>
+    <a class="nav-block" [routerLink] = "'/language'">Lenguas</a>
+    <a class="nav-block" [routerLink] = "'/user'">Usuarios</a>
+  </div>
+  <img class="menu" onclick="toggleOptionList()" src="../../../assets/lesson/menu.png" height="70" width="85" alt="Menu" />
+  <div class="option-list" id="option-list">
+    <p class="nav-block" ><a [routerLink] = "'/course'" class="e">Cursos</a></p>
+    <p class="nav-block" ><a [routerLink] = "'/lessonA'" class="e">Lecciones</a></p>
+    <p class="nav-block" ><a [routerLink] = "'/progress'" class="e">Progresos</a></p>
+    <p class="nav-block" ><a [routerLink] = "'/language'" class="e">Lenguas</a></p>
+    <p class="nav-block" ><a [routerLink] = "'/user'" class="e">Usuarios</a></p>
+  </div>
+</nav>
+
+<section class="main_container">
+  <h1 class="title">Registro de Leccion</h1>
+  <div class="main_container">
+    <mat-card class="registration-card">
+      <mat-card-content>
+        <form [formGroup]="registroLeccionForm" (ngSubmit)="onSubmit()">
+          <!-- Titulo -->
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Titulo</mat-label>
+            <input matInput formControlName="titulo" placeholder="Ingresa el titulo de la leccion" required>
+            <mat-error *ngIf="registroLeccionForm.get('titulo')?.invalid && registroLeccionForm.get('titulo')?.touched">
+              Nombre del curso es obligatorio
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Contenido -->
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Contenido</mat-label>
+            <textarea matInput formControlName="contenido" placeholder="Ingresa el contenido de la leccion" required></textarea>
+            <mat-error *ngIf="registroLeccionForm.get('contenido')?.invalid && registroLeccionForm.get('contenido')?.touched">
+              Descripción es obligatoria
+            </mat-error>
+          </mat-form-field>
+
+
+          <!-- Usuario -->
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Curso</mat-label>
+            <mat-select formControlName="cursoID" required>
+              <mat-option *ngFor="let curso of cursos" [value]="curso.id">{{ curso.nombreCurso }}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="registroLeccionForm.get('cursoID')?.invalid && registroLeccionForm.get('cursoID')?.touched">
+              Seleccionar un curso es obligatorio
+            </mat-error>
+          </mat-form-field>
+          <!-- Lengua
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Lengua</mat-label>
+            <mat-select formControlName="lenguaID" required>
+              <mat-option *ngFor="let lengua of lenguas" [value]="lengua.id">{{ lengua.nombreLengua }}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="registroLeccionForm.get('lenguaID')?.invalid && registroLeccionForm.get('lenguaID')?.touched">
+              Seleccionar una lengua es obligatorio
+            </mat-error>
+          </mat-form-field>
+          -->
+          <!-- Botón de registro -->
+          <button mat-raised-button color="primary" type="submit" [disabled]="!registroLeccionForm.valid">
+            Registrar Leccion
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

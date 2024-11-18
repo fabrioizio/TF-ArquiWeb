@@ -1,0 +1,71 @@
+<nav>
+  <a [routerLink] = "'/main-admin'">
+    <img src="../../../assets/logo.png" height="70" width="80" alt="Logo" />
+  </a>
+  <div class="menu-container">
+    <a class="nav-block" [routerLink]="'/course'">Cursos</a>
+    <a class="nav-block" [routerLink]="'/lessonA'">Lecciones</a>
+    <a class="nav-block" [routerLink]="'/listar-preguntas'">Preguntas</a>
+    <a class="nav-block" [routerLink]="'/progress'">Progresos</a>
+    <a class="nav-block" [routerLink]="'/language'">Lenguas</a>
+    <a class="nav-block" [routerLink]="'/user'">Usuarios</a>
+
+    <a class = "nav-block" [routerLink]="'/'">Salir</a>
+  </div>
+  <img class="menu" onclick="toggleOptionList()" src="../../../assets/lesson/menu.png" height="70" width="85" alt="Menu" />
+  <div class="option-list" id="option-list">
+    <p class="nav-block" ><a [routerLink]="'/course'" class="e">Cursos</a></p>
+    <p class="nav-block" ><a [routerLink]="'/lessonA'" class="e">Lecciones</a></p>
+    <p class="nav-block" ><a [routerLink]="'/listar-preguntas'" class="e">Preguntas</a></p>
+    <p class="nav-block" ><a [routerLink]="'/progress'" class="e">Progresos</a></p>
+    <p class="nav-block" ><a [routerLink]="'/language'" class="e">Lenguas</a></p>
+    <p class="nav-block" ><a [routerLink]="'/user'" class="e">Usuarios</a></p>
+    <p class = "nav-block" > <a class = "nav-block" [routerLink]="'/'">Salir</a></p>
+  </div>
+</nav>
+
+<section class="main_container">
+  <h1 class="page-title">Listar Progresos</h1>
+
+  <div class="mat-elevation-z8 course-table-container">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-table">
+
+      <!-- Progreso Id -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Progreso Id</th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Estado -->
+      <ng-container matColumnDef="estado">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Estado</th>
+        <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+      </ng-container>
+
+      <!-- Fecha de ultimo acceso Column -->
+      <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef>Fecha de ultimo acceso</th>
+        <td mat-cell *matCellDef="let element"> {{ element.fechaUltimoAcceso | date: 'dd/MM/yyyy' }} </td>
+      </ng-container>
+
+
+      <!-- Leccion Id -->
+      <ng-container matColumnDef="leccionId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Leccion</th>
+        <td mat-cell *matCellDef="let element"> {{element.leccionesLeccionid.titulo}} </td>
+      </ng-container>
+      <!-- Usuario Id -->
+      <ng-container matColumnDef="usuarioId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Usuario</th>
+        <td mat-cell *matCellDef="let element"> {{element.usuariosUsuarioid.nombre}} </td>
+      </ng-container>
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+</section>

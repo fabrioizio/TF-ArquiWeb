@@ -1,0 +1,51 @@
+<nav>
+  <img src="../../../assets/logo.png" height="70" width="80" alt="Logo" />
+  <div class="menu-container">
+    <a class="nav-block" [routerLink]="'/course'">Cursos</a>
+    <a class="nav-block" [routerLink]="'/lessonA'">Lecciones</a>
+    <a class="nav-block" [routerLink]="'/listar-preguntas'">Preguntas</a>
+    <a class="nav-block" [routerLink]="'/progress'">Progresos</a>
+    <a class="nav-block" [routerLink]="'/language'">Lenguas</a>
+    <a class="nav-block" [routerLink]="'/user'">Usuarios</a>
+
+    <a class = "nav-block" [routerLink]="'/'">Salir</a>
+  </div>
+  <img class="menu" onclick="toggleOptionList()" src="../../../assets/lesson/menu.png" height="70" width="85" alt="Menu" />
+  <div class="option-list" id="option-list">
+    <p class="nav-block" ><a [routerLink]="'/course'" class="e">Cursos</a></p>
+    <p class="nav-block" ><a [routerLink]="'/lessonA'" class="e">Lecciones</a></p>
+    <p class="nav-block" ><a [routerLink]="'/listar-preguntas'" class="e">Preguntas</a></p>
+    <p class="nav-block" ><a [routerLink]="'/progress'" class="e">Progresos</a></p>
+    <p class="nav-block" ><a [routerLink]="'/language'" class="e">Lenguas</a></p>
+    <p class="nav-block" ><a [routerLink]="'/user'" class="e">Usuarios</a></p>
+    <p class = "nav-block" > <a class = "nav-block" [routerLink]="'/'">Salir</a></p>
+  </div>
+</nav>
+<section  class="main_container">
+
+  <!-- Information -->
+  <div class = "web-info">
+    <header>
+      <h1 class = "web-title">Panel de Administración</h1>
+    </header>
+    <p class = "web-description">Aquí puedes gestionar los cursos, lecciones, progresos y lenguas de la plataforma.</p>
+  </div>
+
+  <!-- Image background -->
+  <img class = "image" src = "../../../assets/image.png" height="340" width= "670" />
+
+</section>
+<script>
+  function toggleOptionList() {
+    var element = document.getElementById("option-list");
+    if (element.style.display === "none" || element.style.display === "") {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  }
+
+  window.onresize = function() {
+    document.getElementById("option-list").style.display = "none";
+  };
+</script>

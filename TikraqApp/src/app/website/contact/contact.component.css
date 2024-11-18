@@ -1,0 +1,80 @@
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+.main_container {
+  width: 100%;
+  max-width: 400px; /* Un poco más ancho para mejor adaptación */
+  margin: 0 auto;
+}
+
+section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 50px; /* Añadido espacio arriba */
+}
+
+.logo img {
+  display: block;
+  margin: 0 auto 20px auto; /* Centrado el logo */
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  background-color: #faff87;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0; /* Elimina padding extra debajo de los inputs */
+}
+
+.submit-button {
+  background-color: #ffe066;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Cambiado a 100% */
+  margin-bottom: 15px;
+}
+
+.submit-button:hover {
+  background-color: #ffdd57;
+}
+
+.extra-options {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.extra-options a {
+  color: #80d4ff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.extra-options a:hover {
+  text-decoration: underline;
+}

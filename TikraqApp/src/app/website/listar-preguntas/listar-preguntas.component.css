@@ -1,0 +1,209 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de nav añadido */
+nav {
+  padding: 10px;
+  background-color: #CDF5F7;
+  display: flex;
+}
+
+nav img {
+  margin-left: auto; /* Mueve el logo lo más a la izquierda posible */
+}
+
+a.nav-block {
+  font-family: 'Now Bold';
+  font-size: 20px;
+  padding: 10px;
+  border: 3px solid #FFDE59;
+  border-radius: 25px;
+  background-color: #FFDE59;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  min-width: 130px;
+  white-space: nowrap; /* Evita que el texto se divida en líneas */
+}
+
+a.nav-block:hover {
+  color: white;
+}
+
+img.menu {
+  display: none;
+  cursor: pointer;
+  width: 10%; /* Ajuste relativo al ancho del viewport */
+  max-width: 85px; /* Tamaño máximo para pantallas más grandes */
+  height: auto; /* Mantener proporciones de la imagen */
+}
+
+.e {
+  border: 3px solid #FFDE59;
+  background-color: #FFDE59;
+  text-decoration: none;
+  color: black;
+}
+
+.e:hover {
+  color: white;
+}
+
+p.nav-block {
+  font-family: 'Now Bold';
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #FFDE59;
+  border-radius: 25px;
+  background-color: #FFDE59;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.option-list {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5CE1E6;
+  position: absolute;
+  top: 5.8em;
+  right: 0;
+  width: 20em;
+  height: auto;
+}
+
+.menu-container {
+  display: flex;
+  margin-left: auto; /* Esto empuja los elementos hacia la derecha */
+  gap: 20px; /* Añade espacio entre los elementos */
+  align-items: center;
+}
+
+/* Estilos originales */
+.page-title {
+  font-size: 32px;
+  color: #1e3a8a;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.register-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #1e40af;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-button:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.course-table-container {
+  margin: 30px auto;
+  max-width: 90%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.mat-header-cell, .mat-cell {
+  font-size: 16px;
+  padding: 15px;
+  text-align: center;
+}
+
+.mat-header-cell {
+  background-color: #e5e7eb;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+.mat-cell {
+  color: #374151;
+}
+
+.mat-header-cell:first-child, .mat-cell:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.mat-header-cell:last-child, .mat-cell:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.mat-icon-button {
+  color: #1e40af;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.mat-icon-button:hover {
+  color: #2563eb;
+  transform: scale(1.2);
+}
+
+/* Media Queries para Responsividad */
+@media only screen and (max-width: 1245px) {
+  nav {
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  a.nav-block {
+    display: none; /* Oculta los enlaces en pantallas pequeñas */
+  }
+
+  img.menu {
+    display: block; /* Muestra el menú hamburguesa en pantallas pequeñas */
+    cursor: pointer;
+    width: 15%; /* Tamaño relativo del menú */
+    max-width: 70px; /* Tamaño máximo del menú */
+    height: auto; /* Mantener proporciones */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.web-info {
+    margin-right: 0;
+    text-align: center;
+    padding: 10px;
+  }
+
+  img.image {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1.page-title {
+    font-size: 18px;
+  }
+
+  p.web-description {
+    font-size: 14px;
+  }
+
+  img.image {
+    max-width: 100%;
+    height: auto;
+  }
+}

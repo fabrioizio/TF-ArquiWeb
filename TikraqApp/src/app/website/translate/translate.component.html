@@ -1,0 +1,54 @@
+<header>
+  <div class="header-about-section">
+    <a class="logo" (click)="navegacion()">
+      <img src="../../../assets/logo.png" height="80" width="90"/>
+    </a>
+    <h1 class="page-title">Panel de control</h1>
+  </div>
+  <div class="header-profile-section">
+
+    <a [routerLink]="'/editar-perfil'">
+      <img src="../../../assets/profile.png" height="80" width="90"/>
+    </a>
+  </div>
+</header>
+
+<section>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="main_container">
+    <div class="from-translate-section">
+      <label for="from-language">IDIOMA</label>
+      <select id="from-language" class="scrollable-select" (change)="updateFromLanguage($event)">
+        <option value="ay">Aimara</option>
+        <option value="ja">Japones</option>
+        <option value="es">Español</option>
+        <option value="en">Inglés</option>
+        <option value="qu" >Quechua</option>
+      </select>
+      <textarea id="from-translate-input" class="translate-input" [(ngModel)]="textoOriginal" placeholder="Hola mundo"></textarea>
+    </div>
+
+    <div class="to-translate-section">
+      <label for="to-language">IDIOMA TRADUCIDO</label>
+      <select id="to-language" class="scrollable-select" (change)="updateToLanguage($event)">
+        <option value="ay">Aimara</option>
+        <option value="ja">Japones</option>
+
+        <option value="es">Español</option>
+        <option value="en">Inglés</option>
+        <option value="qu" >Quechua</option>
+      </select>
+
+      <p id="to-translate-input" class="translate-input">{{ textoTraducido }}</p>
+    </div>
+  </div>
+
+
+  <div class="translate-submit-button-container">
+    <button id="translate-submit-button" class="translate-submit-button" (click)="traducir()">TRADUCIR</button>
+  </div>
+</section>

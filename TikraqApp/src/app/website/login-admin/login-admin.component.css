@@ -1,0 +1,86 @@
+body{
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+.main_container{
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+section{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 320px;
+  text-align: center;
+  box-sizing: border-box;
+
+}
+
+.logo img {
+  display: block;
+  margin-right: auto; /* Mueve el logo lo más a la izquierda posible */
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  background-color: #faff87;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.input {
+  margin-bottom: 15px;
+}
+
+.input-text {
+  width: 90%; /* Cambiado de 100% a 90% */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.submit-button {
+  background-color: #ffe066;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 90%; /* Cambiado de 100% a 90% */
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.submit-button:hover {
+  background-color: #ffdd57;
+}
+
+.extra-options {
+  font-size: 12px;
+}
+
+.extra-options a {
+  color: #80d4ff;
+  text-decoration: none;
+}
+
+.extra-options a:hover {
+  text-decoration: underline;
+}
+
+

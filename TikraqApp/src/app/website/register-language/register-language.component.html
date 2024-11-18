@@ -1,0 +1,33 @@
+<header>
+  <div class="header-logo">
+    <a [routerLink]="'/main-admin'">
+      <img src="../../../assets/logo.png" alt="Logo" height="80" width="90">
+    </a>
+  </div>
+</header>
+<section class="main_container">
+
+  <h1 class="title">Registrar Lengua</h1>
+  <div class="main_container">
+    <!-- Formulario de Registro de Lengua -->
+    <mat-card class="registration-card">
+      <mat-card-content>
+        <form [formGroup]="registroLenguaForm" (ngSubmit)="onSubmit()">
+          <!-- Nombre de la Lengua -->
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Nombre de la Lengua</mat-label>
+            <input matInput formControlName="nombreLengua" placeholder="Ingresa el nombre de la lengua" required>
+            <mat-error *ngIf="registroLenguaForm.get('nombreLengua')?.invalid && registroLenguaForm.get('nombreLengua')?.touched">
+              El nombre de la lengua es obligatorio
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Botón de registro -->
+          <button mat-raised-button color="primary" type="submit" [disabled]="!registroLenguaForm.valid">
+            Registrar Lengua
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
